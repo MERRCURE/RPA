@@ -1,0 +1,3 @@
+selenium
+pdf2image
+pytesseract
