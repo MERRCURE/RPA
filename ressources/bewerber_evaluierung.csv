@@ -1,0 +1,11 @@
+Bewerbernummer,Claimed_Note,OCR_Note,OCR_BWL,OCR_VWL,OCR_Statistik,Claimed_BWL,Claimed_VWL,Claimed_Statistik,Status,Details,MatchedModules,UnrecognizedLines
+89000101,2.5,,0.0,0.0,0.0,3.0,3.0,3.0,Nicht erfuellt,Note zu schlecht (2.5 > 2.4); BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000101,2.5,,0.0,0.0,0.0,3.0,3.0,3.0,Nicht erfuellt,Note zu schlecht (2.5 > 2.4); BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000107,,,0.0,0.0,0.0,80.0,17.0,25.0,Nicht erfuellt,Note nicht vorhanden (Quelle: Claimed); BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000110,1.0,,0.0,0.0,0.0,100.0,20.0,20.0,Nicht erfuellt,BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000100,0.0,,0.0,0.0,0.0,40.0,100.0,20.0,Nicht erfuellt,BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000103,2.6,,0.0,0.0,0.0,4.0,4.0,4.0,Nicht erfuellt,Note zu schlecht (2.6 > 2.4); BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000106,2.4,,0.0,0.0,0.0,100.0,40.0,30.0,Nicht erfuellt,BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000108,1.0,,0.0,0.0,0.0,0.0,0.0,0.0,Nicht erfuellt,BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000109,,,0.0,0.0,0.0,0.0,0.0,0.0,Nicht erfuellt,Note nicht vorhanden (Quelle: Claimed); BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
+89000099,1.0,,0.0,0.0,0.0,90.0,30.0,60.0,Nicht erfuellt,BWL zu wenig (0.0 < 60.0); VWL zu wenig (0.0 < 20.0); Statistik zu wenig (0.0 < 15.0),,
