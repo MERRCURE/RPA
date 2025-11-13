@@ -1,3 +1,5 @@
-selenium
-pdf2image
-pytesseract
+selenium>=4.15.2
+pdf2image>=1.16.0
+pytesseract>=0.3.10
+
+

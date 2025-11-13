@@ -12,31 +12,26 @@ from selenium.webdriver.chrome.options import Options
 from utils.browserautomation import BrowserAutomation
 from phases.filterphase_evaluierung import run_filterphase_evaluierung
 
+
+#1 URL
 FLOW_URL = "https://test02.digstu.hhu.de/qisserver/pages/startFlow.xhtml?_flowId=searchApplicants-flow&navigationPosition=hisinoneapp,applicationEditorGeneratedJSFDtos&recordRequest=true"
+
+
 
 
 def create_chrome_options():
     chrome_options = Options()
-    chrome_options.add_argument(
-        "--disable-blink-features=AutomationControlled")
-    chrome_options.add_argument("--window-size=1400,900")
-    chrome_options.add_argument(
-        "--disable-features=IsolateOrigins,site-per-process,AutomationControlled")
-    chrome_options.add_experimental_option(
-        "excludeSwitches", ["enable-automation"])
-    chrome_options.add_experimental_option("useAutomationExtension", False)
-    chrome_options.add_argument("--enable-javascript")
-    chrome_options.add_argument("--disable-infobars")
+    
+ 
+    chrome_options.add_argument("--window-size=1400,900") 
     chrome_options.add_argument("--ignore-certificate-errors")
-
-    profile_path = os.path.join(os.path.dirname(__file__), "selenium_profile")
-    os.makedirs(profile_path, exist_ok=True)
-    chrome_options.add_argument(f"--user-data-dir={profile_path}")
+    chrome_options.add_argument("--enable-javascript")
 
     chrome_options.add_experimental_option("prefs", {
         "credentials_enable_service": False,
         "profile.password_manager_enabled": False
     })
+
     return chrome_options
 
 
@@ -109,7 +104,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     credentials_path = os.path.join(
         os.path.dirname(__file__), "credentials.json")
-    with open(credentials_path, "r", encoding="utf-8") as f:
+    with open(credentials_path, "r", encoding="utf-8") as f: 
         credentials = json.load(f)
 
     username = credentials["username"]
@@ -118,6 +113,8 @@ if __name__ == "__main__":
     chrome_options = create_chrome_options()
     bot = BrowserAutomation(options=chrome_options)
 
+
+    # 1 url
     login_url = "https://test02.digstu.hhu.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces"
     print("STATUS: Öffne Login-Seite...")
     bot.open_url(login_url)
@@ -126,6 +123,7 @@ if __name__ == "__main__":
     perform_login(bot, username, password)
 
     print("PAUSE: Falls Popup erscheint, bitte Benutzername/Passwort eingeben (7 Sekunden)...")
+    #2 entfernen
     time.sleep(7)
 
     open_flow(bot)

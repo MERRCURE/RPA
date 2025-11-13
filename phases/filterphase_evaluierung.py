@@ -20,9 +20,22 @@ except Exception:
     convert_from_path = None
     pytesseract = None
 
-# --- START NEUER CODE: POPPLER AUTO-DETECT ---
 def get_poppler_path():
     """Findet automatisch den Poppler-Installationspfad von winget."""
+    
+    # --- START FALLBACK-LISTE (WICHTIGSTE ÄNDERUNG) ---
+    # Feste Pfade für Poppler. Ersetzen Sie den ersten Eintrag durch Ihren Pfad!
+    FALLBACK_PATHS = [
+        # BITTE HIER DEN DURCH DIE MANUELLE SUCHE GEFUNDENEN PFAD EINFÜGEN!
+        r"C:\Users\spenl\AppData\Local\Microsoft\WinGet\Packages\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\poppler-25.07.0\Library\bin"
+    ]
+
+    for path in FALLBACK_PATHS:
+        if os.path.isdir(path):
+            print(f"INFO: Poppler-Pfad über Hardcode-Fallback erkannt: {path}")
+            return path
+    # --- ENDE FALLBACK-LISTE ---
+    
     if platform.system() == "Windows":
         # Standard-Installationspfad von winget
         poppler_dirs = glob.glob(r"C:\Program Files\poppler-*")
@@ -707,6 +720,7 @@ def run_filterphase_evaluierung(bot, flow_url, config):
                 print(
                     "INFO: Erster Bewerber (Index 0) — warte bis zu 7 Sekunden, damit Popup manuell geschlossen werden kann...")
                 try:
+                    # 2  (7 mit 0.5 ersetzen)
                     WebDriverWait(bot.browser, 7).until(
                         EC.any_of(
                             EC.presence_of_element_located(
